@@ -2,7 +2,7 @@ import {useEffect, useRef, useState} from 'react';
 
 export default function useTimer(handler, periodInMilliseconds, activityFlag) {
 
-    const [timeDelay, setTimeDelay] = useState(1);
+    const [timeDelay, setTimeDelay] = useState(periodInMilliseconds / 1000);
     const savedCallback = useRef();
     const initialTime = useRef();
 
