@@ -13,7 +13,7 @@ export default function Sayfa(props) {
     const [obje, setObje] = useState({id: 1, adi: 'Bir'});
 
     useTimer(val => {
-        console.log(val);
+        //console.log(val);
         setSayi(sayi + 1);
     }, 5000, true);
 
