@@ -3,6 +3,7 @@ import AltSayfa from "./AltSayfa";
 import './sayfa.css';
 import useTimer from "./useTimer ";
 import ReducerSample from "./ReducerSample";
+import SubjectSample from "./SubjectSample";
 
 export default function Sayfa(props) {
 
@@ -50,6 +51,9 @@ export default function Sayfa(props) {
             </div>
             <div>
                 <ReducerSample />
+            </div>
+            <div>
+                <SubjectSample />
             </div>
             {props.goster &&
             <div>
