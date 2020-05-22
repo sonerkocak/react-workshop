@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import AltSayfa from "./AltSayfa";
 import './sayfa.css';
 import useTimer from "./useTimer ";
+import ReducerSample from "./ReducerSample";
 
 export default function Sayfa(props) {
 
@@ -46,6 +47,9 @@ export default function Sayfa(props) {
             </div>
             <div>
                 {obje.adi}
+            </div>
+            <div>
+                <ReducerSample />
             </div>
             {props.goster &&
             <div>
