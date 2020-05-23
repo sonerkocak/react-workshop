@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Sayfa from "./Sayfa";
 import TextInputWithFocusButton from "./TextInputWithFocusButton";
+import SelectPage from "./SelectPage";
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
     <div className="App">
       <Sayfa baslik2="Sayfa Başlığı" goster >
       <TextInputWithFocusButton />
+      <SelectPage />
           <header className="App-header">
               <img src={logo} className="App-logo" alt="logo" />
               <p>
