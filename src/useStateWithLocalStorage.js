@@ -1,14 +1,8 @@
-import {useEffect, useRef, useState} from "react";
+import {useEffect, useState} from "react";
 
 export default function useStateWithLocalStorage(initialVal, key) {
 
     const [val, setVal] = useState(initialVal);
-
-    const actualVal = useRef();
-
-    useEffect(() => {
-        actualVal.current = val;
-    }, [val]);
 
     useEffect(() => {
         console.log('Read from LS');
@@ -17,17 +11,14 @@ export default function useStateWithLocalStorage(initialVal, key) {
             console.log(JSON.parse(valFromLS));
             setVal(JSON.parse(valFromLS));
         }
+    }, [key]);
 
-        return () => writeToLS();
-    // eslint-disable-next-line
-    }, []);
-
-    function writeToLS() {
+    useEffect(() => {
         console.log('Set to LS');
-        const valToLS = JSON.stringify(actualVal.current);
+        const valToLS = JSON.stringify(val);
         console.log(valToLS);
         localStorage.setItem(key, valToLS);
-    }
+    }, [key, val]);
 
     return [val, setVal];
 }
